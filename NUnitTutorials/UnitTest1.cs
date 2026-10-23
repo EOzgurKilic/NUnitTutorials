@@ -11,11 +11,25 @@ public class Tests
         calculator2 = new Calculate();//We carried the common object (source) here to the Setup method so that we don't have to create it in each test.
     }
 
+    [TearDown]
+    public void TearDown()
+    {
+        // Runs after each test method (just like Setup is run before each).
+        // Use this method to release resources created during testing,
+        // such as closing browser sessions, database connections, or file streams.
+        // Exp: (IWebDriver class instance) driver.Quit();
+    }
+
     [OneTimeSetUp]//This does the same job as SetUp attribute but with a nuance;
     //When there is costly setup and we do not need fresh objects for each test method, we put our common objects & etc. inside this method and it only creates them once for the whole class.
     public void OneTimeSetup()
     {
         
+    }
+    [OneTimeTearDown]
+    public void OneTimeTearDown()
+    {
+        // One time version of the TearDown pretty much.
     }
 
     [Test]//Marking a method with this attribute tells it is a test method.
