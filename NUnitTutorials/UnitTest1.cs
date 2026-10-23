@@ -54,13 +54,13 @@ public class Tests
         //var calculator2 = new Calculate(); Instead of creating a new instance in each test, we can create a common Calculate object in the Setup method.
 
         //Act and Assert together
-        Assert.That(calculator2.Divide(10, 2), Is.EqualTo(5));
+        Assert.That(calculator2.Divide(10, 2), Is.EqualTo(5)); 
     }
     [Test]
     public void Multiply_TwoNumbers_ReturnsProduct()
     {
         //Act and Assert together
-        Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5));
+        Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5)); //Did this 5 intentionally so that u can see how a failed result looks too.
     }
     [Test]
     public void Subtract_TwoNumbers_ReturnsDifference()
