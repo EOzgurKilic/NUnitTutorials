@@ -3,21 +3,49 @@ namespace NUnitTutorials;
 
 public class Tests
 {
-    [SetUp]
+    Calculate calculator2;
+    [SetUp]//Marking a method with this attribute tells it is a Setup method.
+    //Setup methods are run before each test method so all test methods get fresh instances and so on.
     public void Setup()
     {
+        calculator2 = new Calculate();//We carried the common object (source) here to the Setup method so that we don't have to create it in each test.
     }
 
-    [Test]
-    public void Test1()
+    [OneTimeSetUp]//This does the same job as SetUp attribute but with a nuance;
+    //When there is costly setup and we do not need fresh objects for each test method, we put our common objects & etc. inside this method and it only creates them once for the whole class.
+    public void OneTimeSetup()
+    {
+        
+    }
+
+    [Test]//Marking a method with this attribute tells it is a test method.
+    public void AdditionTest()
     {
         //Arrange - creates the object you want to test, often called the system under test.
-        var calculator = new Calculate();
+        var calculator1 = new Calculate();
         
         //Act - Calls the method you want to test
-        var result = calculator.Add(1, 1);
+        var result = calculator1.Add(1, 1);
         
         //Assert - Checks that the result you ended up with is what you expected. Assert.That takes the actual value and a constraint that describes the expected value, such as Is.EqualTo(2);
         Assert.That(result, Is.EqualTo(2));
+    }
+    [Test]
+    public void DivisionTest()
+    {
+        //Arrange
+        //var calculator2 = new Calculate(); Instead of creating a new instance in each test, we can create a common Calculate object in the Setup method.
+
+        //Act and Assert together
+        Assert.That(calculator2.Divide(10, 2), Is.EqualTo(5));
+    }
+    [Test]
+    public void MultiplicationTest()
+    {
+        //Arrange
+        //var calculator2 = new Calculate();
+
+        //Act and Assert together
+        Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5));
     }
 }
