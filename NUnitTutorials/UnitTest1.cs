@@ -63,7 +63,7 @@ public class Tests
         Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5));
     }
     [Test]
-    public void Substract_TwoNumbers_ReturnsDifference()
+    public void Subtract_TwoNumbers_ReturnsDifference()
     {
         //Act and Assert together
         Assert.That(calculator2.Subtract(1, 1), Is.EqualTo(0));
