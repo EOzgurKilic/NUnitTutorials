@@ -59,19 +59,13 @@ public class Tests
     [Test]
     public void Multiply_TwoNumbers_ReturnsProduct()
     {
-        //Arrange
-        //var calculator2 = new Calculate();
-
         //Act and Assert together
         Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5));
     }
     [Test]
     public void Substract_TwoNumbers_ReturnsDifference()
     {
-        //Arrange
-        //var calculator2 = new Calculate();
-
         //Act and Assert together
-        Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5));
+        Assert.That(calculator2.Subtract(1, 1), Is.EqualTo(0));
     }
 }
