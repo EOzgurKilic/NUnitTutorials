@@ -32,8 +32,11 @@ public class Tests
         // One time version of the TearDown pretty much.
     }
 
+    //Based on the Test Method Naming Convention, The name prototype of the test methods should be:
+    //MethodName_Scenario_ExpectedBehavior
+
     [Test]//Marking a method with this attribute tells it is a test method.
-    public void AdditionTest()
+    public void Add_TwoNumbers_ReturnsSum()
     {
         //Arrange - creates the object you want to test, often called the system under test.
         var calculator1 = new Calculate();
@@ -45,7 +48,7 @@ public class Tests
         Assert.That(result, Is.EqualTo(2));
     }
     [Test]
-    public void DivisionTest()
+    public void Divide_TwoNumbers_ReturnsQuotient()
     {
         //Arrange
         //var calculator2 = new Calculate(); Instead of creating a new instance in each test, we can create a common Calculate object in the Setup method.
@@ -54,7 +57,16 @@ public class Tests
         Assert.That(calculator2.Divide(10, 2), Is.EqualTo(5));
     }
     [Test]
-    public void MultiplicationTest()
+    public void Multiply_TwoNumbers_ReturnsProduct()
+    {
+        //Arrange
+        //var calculator2 = new Calculate();
+
+        //Act and Assert together
+        Assert.That(calculator2.Multiply(1, 1), Is.EqualTo(5));
+    }
+    [Test]
+    public void Substract_TwoNumbers_ReturnsDifference()
     {
         //Arrange
         //var calculator2 = new Calculate();
