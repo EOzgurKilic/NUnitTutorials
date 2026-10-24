@@ -1,8 +1,9 @@
 ﻿using Calculator;
-namespace NUnitTutorials;
+namespace OrdinaryTests;
 
 public class Tests
 {
+    //Ordinary Tests Page
     Calculate calculator2;
     [SetUp]//Marking a method with this attribute tells it is a Setup method.
     //Setup methods are run before each test method so all test methods get fresh instances and so on.
