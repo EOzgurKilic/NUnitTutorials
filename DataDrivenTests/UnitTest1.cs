@@ -1,7 +1,7 @@
 ﻿using Calculator;
 
 namespace DataDrivenTests;
-[TestFixture]
+
 public class Tests
 {
     private Calculate cal;
