@@ -38,7 +38,7 @@
 
         [Test]
         //We use [Ignore(WhyIgnored?, Until = date)] to have a Test not executed until a specific date.
-        [Ignore("Arbitrarily Ignored", Until = "2099-12-32")]
+        [Ignore("Arbitrarily Ignored", Until = "2099-12-31")]
         public void IgnoredTest()
         {
             Assert.Pass();
