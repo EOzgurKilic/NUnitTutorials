@@ -27,9 +27,17 @@ namespace Assumptions_Warnings
         [Test]
         public void WarningTest()
         {
+            //If forms
             Warn.If(2 + 2 == 4);
+            Warn.If(() => 2 + 2 == 4);
+            Warn.If(2 + 2, Is.Not.EqualTo(5));
+            Warn.If(() => 2 + 2, Is.Not.EqualTo(5).After(500));
+
             Warn.Unless(2 + 2 == 4);
-            Warn.Unless(2 + 2 == 5);
+            Warn.Unless(() => 2 + 2 == 4);
+            Warn.Unless(2 + 2, Is.EqualTo(5));
+            Warn.Unless(() => 2 + 2, Is.EqualTo(5).After(500));
+
             Assert.Warn("be warned about the opertaion");
             Assert.Pass();
         }
