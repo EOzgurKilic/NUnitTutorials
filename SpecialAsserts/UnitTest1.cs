@@ -57,7 +57,7 @@
         //For Data-Driven tests, you can ignore the cases in the IEnumerable TestCaseSource method;
 
         [Test]
-        [TestCaseSource(nameof(TCSource)]
+        [TestCaseSource(nameof(TCSource))]
         public void SourceTest(int val1, int val2)
         {
 
