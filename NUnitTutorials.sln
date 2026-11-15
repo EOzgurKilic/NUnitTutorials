@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialAsserts", "SpecialAs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assumptions_Warnings", "Assumptions_Warnings\Assumptions_Warnings.csproj", "{45906AAC-9C00-4A72-8F20-A1AFC177B19B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssertConstraints", "AssertConstraints\AssertConstraints.csproj", "{200C7B54-8627-4FC9-AEF4-6D4A30153E04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{45906AAC-9C00-4A72-8F20-A1AFC177B19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45906AAC-9C00-4A72-8F20-A1AFC177B19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45906AAC-9C00-4A72-8F20-A1AFC177B19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{200C7B54-8627-4FC9-AEF4-6D4A30153E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{200C7B54-8627-4FC9-AEF4-6D4A30153E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{200C7B54-8627-4FC9-AEF4-6D4A30153E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{200C7B54-8627-4FC9-AEF4-6D4A30153E04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
